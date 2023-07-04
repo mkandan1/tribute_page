@@ -385,19 +385,19 @@ footer > p {
     }
 
     .timeline::after {
-        left: 128px;
+        left: 114px;
     }
         
         /* Full-width containers */
         .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
+        width: 80vw;
+        padding-left: 30rem
+        padding-left: 0px;
         }
         
         /* Make sure that all arrows are pointing leftwards */
         .container::before {
-        left: 60px;
+        left: 20px;
         border: medium solid white;
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;
@@ -405,7 +405,7 @@ footer > p {
       
         /* Make sure all circles are at the same spot */
         .left::after, .right::after {
-        left: 15px;
+        left: 1px;
         }
         
         /* Make all right containers behave like the left ones */
