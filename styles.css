@@ -11,6 +11,7 @@ body, html {
     padding: 0 !important;
     margin: 0 !important;
     scroll-behavior: smooth;
+    background-color: #fafafa;
 }
 
 .header {
@@ -83,7 +84,8 @@ ul li:hover{
 
 /* Main */
 section {
-    height: 100vh;
+    height: auto;
+    padding-bottom: 2rem !important;
 }
 #hero {
     padding: 0 6rem;
@@ -117,6 +119,19 @@ section {
     animation: updown 2s ease-in-out infinite both;
 }
 
+
+/* Timeline */
+#time-line {
+    padding: 0 6rem;
+    padding-top: 5rem;
+}
+#time-line h3{
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
+    letter-spacing: -2px;
+}
+
 @keyframes updown {
     0% {
         bottom: 6rem;
@@ -142,6 +157,178 @@ section {
 }
 
 
+/* Timeline */
+
+#time-line {
+    position: relative;
+}
+
+.timeline {
+    margin-top: 5rem;
+}
+
+.timeline::after {
+    content: '';
+    margin-top: 15rem;
+    position: absolute;
+    width: 6px;
+    background-color: #2cc753;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left {
+    left: 0%;
+}
+
+.right {
+    left: 50%;
+}
+.left::before {
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.right::before {
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    border-radius: 10px;
+}
+
+.content img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.content h4 {
+    padding: 0 30px;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+}
+
+#img-caption > p {
+    padding: 10px 30px !important;
+    color: #727887;
+    font-size: .8rem;
+}
+
+
+.content > p {
+    padding: 0 30px;
+    padding-bottom: 30px; 
+    line-height: 30px;
+    color: #727887;
+    font-size: .9rem;
+}
+
+#tribute-info {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+#tribute-link {
+    text-decoration: none;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #262630;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: -0px;
+}
+
+footer {
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: #2cc753;
+}
+
+footer > p {
+    font-weight: 600;
+}
+
+#quote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem;
+    padding-bottom: 10rem !important;
+}
+
+#quote > p::before {
+    content: "\“";
+    font-size: 3rem;
+}
+
+#quote > p {
+    width: 40vw;
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size:3rem;
+    font-weight: 800;
+}
+
+#quote > p::after {
+    content: '\”';
+    font-size: 3rem;
+}
 
 @media (max-width: 800px){
     .toggle-button {
@@ -196,4 +383,38 @@ section {
         margin: 0 auto;
         width: 30vw;
     }
+
+    .timeline::after {
+        left: 128px;
+    }
+        
+        /* Full-width containers */
+        .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        }
+        
+        /* Make sure that all arrows are pointing leftwards */
+        .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+        }
+      
+        /* Make sure all circles are at the same spot */
+        .left::after, .right::after {
+        left: 15px;
+        }
+        
+        /* Make all right containers behave like the left ones */
+        .right {
+        left: 0%;
+        }
+
+        #quote > p {
+            width: 100vw;
+            font-size: 2rem;
+        }
 }

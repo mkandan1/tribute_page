@@ -6,3 +6,8 @@ toggleButton.addEventListener('click', () => {
     console.log('Clicked');
     headerNav.classList.toggle('active')
 })
+
+function redirect(){
+    console.log('Working?');
+    window.location.href = 'https://www.britannica.com/biography/Sundar-Pichai';
+}
